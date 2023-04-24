@@ -1,0 +1,5 @@
+export const GET_FILMS = "GET_FILMS";
+export const GET_CHARACTERS = "GET_CHARACTERS";
+
+export const FILTER_BY_EYES = "FILTER_BY_EYES";
+export const FILTER_BY_GENDER = "FILTER_BY_GENDER";
