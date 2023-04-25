@@ -1,0 +1,64 @@
+.nav {
+    display: flex;
+    width: 100vw;
+    height: 8em;
+    background-color: #292929;
+    transition: 0.2s;
+}
+
+.nav_container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_logo {
+    width: 180px;
+}
+
+.nav_links_container {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto 0;
+}
+
+.nav_links {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.nav_links:hover {
+    transition: 0.4s;
+    color: rgb(255, 217, 0)
+}
+
+/* RESPONSIVE -------------------------------------- */
+@media screen and (max-width: 600px) {
+    .nav {
+        height: 15em;
+    }
+
+    .nav_logo {
+        margin: 2.5em 0;
+    }
+    
+    .nav_container {
+        width: 100%;
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav_links_container {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    
+    .nav_links {
+        text-align: center;
+    }
+}

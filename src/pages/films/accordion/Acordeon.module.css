@@ -1,0 +1,28 @@
+.accordion_container {
+    position: relative;
+    width: 50vw;
+    margin: auto;
+    background-color: rgba(245, 245, 245, 0.671);
+}
+
+.accordion_header {
+    margin: auto;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.accordion_title {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.accordion_info {
+    display: flex;
+    flex-direction: column;
+    background-color: yellow;
+    width: 90%;
+    margin: auto;
+}
