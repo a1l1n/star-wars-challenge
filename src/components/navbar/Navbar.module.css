@@ -1,6 +1,9 @@
 .nav {
+    position: relative;
+    z-index: 4;
     display: flex;
     width: 100vw;
+    position: fixed;
     height: 8em;
     background-color: #292929;
     transition: 0.2s;

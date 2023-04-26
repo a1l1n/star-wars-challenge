@@ -1,28 +1,103 @@
 .accordion_container {
     position: relative;
-    width: 50vw;
-    margin: auto;
+    width: 60vw;
+    margin: 2em auto 1em auto;
+    padding-bottom: 3em;
     background-color: rgba(245, 245, 245, 0.671);
 }
 
+.accordion_header, .accordion_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .accordion_header {
-    margin: auto;
-    text-align: center;
     background-color: whitesmoke;
+    font-size: 20px;
+    height: 6em;
+    margin-bottom: 2em;
+    text-align: center;
 }
 
 .accordion_title {
-    width: 80%;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
+    cursor: pointer;
+    height: 4em;
     justify-content: space-between;
+    margin: auto;
+    width: 80%;
+    color: rgb(71, 61, 2);
+}
+
+.accordion_title span, .accordion_header {
+    font-weight: 800;
+    letter-spacing: 0.2em;
 }
 
 .accordion_info {
+    max-height: 0;
+    overflow: hidden;
+    color: transparent;
+    transition: all 0.4s cubic-bezier(0, 1, 0, 1);
+}
+
+.accordion_show_info {
+    color: transparent;
     display: flex;
+    height: auto;
     flex-direction: column;
-    background-color: yellow;
-    width: 90%;
     margin: auto;
+    max-height: 30em;
+    transition: all 0.4s cubic-bezier(1, 0, 1, 0);
+    width: 80%;
+}
+
+.accordion_info_item {
+    color: black;
+    display: flex;
+    height: 2em;
+    margin-left: 3em;
+}
+
+.accordion_info_item span {
+    color: rgba(0, 0, 0, 0.589);
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    width: 150px;
+}
+
+/* RESPONSIVE -------------------------------------- */
+@media screen and (max-width: 700px) {
+    .accordion_show_info {
+        width: 90%;
+    }
+
+    .accordion_info_item {
+        margin-left: 1.5em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .accordion_container {
+        width: 70vw;
+        margin: 10em auto 1em auto;
+    }
+
+    .accordion_info_item {
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 0.5em;
+    }
+
+    .accordion_info_item span {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .accordion_info_item span {
+        letter-spacing: 0em; 
+        font-size: 15px;  
+    }
 }

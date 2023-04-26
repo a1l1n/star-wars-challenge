@@ -1,32 +1,6 @@
 .films_container {
     width: 100vw;
     height: auto;
-    position: relative;
-    z-index: 0;
-/*     background-color: rgba(0, 0, 0, 0.884); */
-    background-image: url("../../assets/backgrounds/bg_1.jpg");
-    background-size: cover;
-}
-
-.films_tilt {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.films_tilt svg {
-    position: relative;
-    z-index: 0;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 283px;
-    transform: rotateY(180deg);
-}
-
-.films_tilt_shape {
-    fill: #292929;
+    padding: 10em 0 3em 0;
+    background-attachment: fixed;
 }

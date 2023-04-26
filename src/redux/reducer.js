@@ -1,4 +1,5 @@
 import {
+    GET_CHARACTERS,
     GET_FILMS
 } from "./constants";
 
@@ -13,6 +14,11 @@ export default function reducer(state = initialState, actions) {
             return {
                 ...state,
                 films: actions.payload
+            }
+        case GET_CHARACTERS:
+            return {
+                ...state,
+                characters: actions.payload
             }
         default: return state;
     }
