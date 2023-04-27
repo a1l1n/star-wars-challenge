@@ -39,10 +39,10 @@ export default function Accordion() {
             {
               selected === i ?             
               <div className={Styles.accordion_info}>
-                <div className={Styles.accordion_info_item}><span>TITLE:</span>{f.title}</div>
-                <div className={Styles.accordion_info_item}><span>EPISODE: </span>{f.episode_id}</div>
-                <div className={Styles.accordion_info_item}><span>DIRECTOR:</span> {f.director}</div>
-                <div className={Styles.accordion_info_item}><span>CHARACTERS: </span><Link to="/characters">Go to Characters</Link></div>
+                <div className={Styles.accordion_info_item}><span>TITLE</span>{f.title}</div>
+                <div className={Styles.accordion_info_item}><span>EPISODE </span>{f.episode_id}</div>
+                <div className={Styles.accordion_info_item}><span>DIRECTOR</span> {f.director}</div>
+                <div className={Styles.accordion_info_item}><span>CHARACTERS</span><Link to="/characters" className={Styles.acordion_link}>Go to Characters</Link></div>
               </div> 
               : null
             }

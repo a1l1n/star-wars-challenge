@@ -15,7 +15,7 @@
 .accordion_header {
     background-color: whitesmoke;
     font-size: 20px;
-    height: 6em;
+    height: 4em;
     margin-bottom: 2em;
     text-align: center;
 }
@@ -23,16 +23,17 @@
 .accordion_title {
     color: rgb(71, 61, 2);
     cursor: pointer;
-    height: 4em;
+    height: 3em;
     justify-content: space-between;
     margin: auto;
-    padding: 0 4em;
+    padding: 0 3em;
     transition: all 0.4s;
     width: 80%;
 }
 
 .accordion_title:hover {
     background-color: rgba(255, 255, 255, 0.466);
+    width: 80%;
 }
 
 .accordion_title span, .accordion_header {
@@ -54,7 +55,7 @@
     color: black;
     display: flex;
     height: 2em;
-    margin-left: 3em;
+    margin: 0.5em 0 0.5em 3em;
 }
 
 .accordion_info_item span {
@@ -64,7 +65,25 @@
     width: 150px;
 }
 
+.acordion_link {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /* RESPONSIVE -------------------------------------- */
+@media screen and (max-width: 1285px) {
+    .accordion_title {
+        padding: 0 2em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .accordion_title {
+        padding: 0 1em;
+    }
+}
+
 @media screen and (max-width: 700px) {
     .accordion_show_info {
         width: 90%;
@@ -97,5 +116,9 @@
     .accordion_info_item span {
         font-size: 15px;  
         letter-spacing: 0em; 
+    }
+
+    .accordion_title {
+        padding: 0 0.5em;
     }
 }
