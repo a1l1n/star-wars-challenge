@@ -1,4 +1,4 @@
-# star-wars-
+# Star Wars - Challenge
 
 SPA con motivo a las películas de Star Wars.
 Fuente de datos:
