@@ -1,19 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from "react-icons/ai";
-/* import { getFilms } from '../../../redux/actions'; */
 import Styles from "./Acordeon.module.css";
 
 export default function Accordion() {
-/*     const dispatch = useDispatch(); */
     const [ selected, setSelected ] = useState(null);
     const films = useSelector(state => state.films);
-    /* console.log(films) */
-
-/*     useEffect(() => {
-      dispatch(getFilms())
-    }, []); */
 
     const toggle = (i) => {
       if (selected === i) {
@@ -43,12 +36,17 @@ export default function Accordion() {
                 selected === i ? <AiOutlineMinusCircle /> : <AiOutlinePlusCircle />
               }              
             </div>
-            <div className={selected === i ? Styles.accordion_show_info : Styles.accordion_info}>
-              <div className={Styles.accordion_info_item}><span>TITLE:</span>{f.title}</div>
-              <div className={Styles.accordion_info_item}><span>EPISODE: </span>{f.episode_id}</div>
-              <div className={Styles.accordion_info_item}><span>DIRECTOR:</span> {f.director}</div>
-              <div className={Styles.accordion_info_item}><span>CHARACTERS: </span><Link to="/characters">Go to Characters</Link></div>
-            </div>
+            {
+              selected === i ?             
+              <div className={Styles.accordion_info}>
+                <div className={Styles.accordion_info_item}><span>TITLE:</span>{f.title}</div>
+                <div className={Styles.accordion_info_item}><span>EPISODE: </span>{f.episode_id}</div>
+                <div className={Styles.accordion_info_item}><span>DIRECTOR:</span> {f.director}</div>
+                <div className={Styles.accordion_info_item}><span>CHARACTERS: </span><Link to="/characters">Go to Characters</Link></div>
+              </div> 
+              : null
+            }
+
           </div>
         ))
       }

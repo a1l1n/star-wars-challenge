@@ -1,0 +1,56 @@
+.table_container {
+    position: relative;
+    z-index: 3;
+    margin: 0 auto;
+    width: 60vw;
+    height: auto;
+    background-color: rgba(245, 245, 245, 0.651);
+}
+
+.table_div_buttons {
+    z-index: 3;
+}
+
+.table_div_buttons button {
+    color: whitesmoke;
+    cursor: pointer;
+    height: 3em;
+    margin: 1em;
+    width: 8em;
+    border: 1px solid rgba(245, 245, 245, 0.521);
+    background-color: transparent;
+    transition: all 0.5s;
+    font-weight: 600;
+}
+
+.table_div_buttons button:hover {
+    background-color: rgba(245, 245, 245, 0.253);
+    color: yellow
+}
+
+.table_container thead {
+    background-color: whitesmoke;
+    height: 4em;
+}
+
+.table_container tr {
+    height: 2em;
+    text-align: center;
+}
+
+.table_container tr:nth-child(even) {
+    background-color: rgba(245, 245, 245, 0.699);
+}
+
+/* RESPONSIVE -------------------------------------- */
+
+@media screen and (max-width: 700px) {
+    .table_div_buttons button {
+        background-color: rgba(0, 0, 0, 0.836);
+    }
+
+    .table_div_buttons button:hover {
+        background-color: whitesmoke;
+        color: black;
+    }
+}

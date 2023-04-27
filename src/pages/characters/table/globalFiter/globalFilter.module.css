@@ -1,0 +1,33 @@
+.global_filter_container {
+    background-color: rgba(245, 245, 245, 0.253);
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8em;
+    width: 60vw;
+    color: white;
+} 
+
+.global_filter_container input {
+    border: none;
+    outline: none;
+    margin-left: 2em;
+    height: 1.5em;
+    background-color: rgba(245, 245, 245, 0.616);
+}
+
+/* RESPONSIVE -------------------------------------- */
+@media screen and (max-width: 870px) {
+    .global_filter_container {
+        background-color: transparent;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .flobal_filter_container {
+        margin-top: 50em;
+        max-width: 40vw;   
+    }
+}

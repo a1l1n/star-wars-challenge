@@ -1,14 +1,19 @@
+import { columnFilter } from "./columnFilter/columnFilter";
+
 export const COLUMNS = [
     {
         Header: "Name",
-        accessor: "name"
+        accessor: "name",
+        Filter: columnFilter
     },
     {
         Header: "Eye Color",
-        accessor: "eye_color"
+        accessor: "eye_color",
+        Filter: columnFilter
     },
     {
         Header: "Gender",
-        accessor: "gender"
+        accessor: "gender",
+        Filter: columnFilter
     }
 ]
