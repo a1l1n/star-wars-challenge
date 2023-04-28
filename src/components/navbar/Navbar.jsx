@@ -9,8 +9,8 @@ export default function Navbar() {
         <div className={Styles.nav_container}>
             <img src={SwLogo} alt="Star Wars Logo" className={Styles.nav_logo}/>
             <div className={Styles.nav_links_container}>
-                <Link to="/" className={Styles.nav_links}>Films</Link>
-                <Link to="/characters" className={Styles.nav_links}>Characters</Link>
+                <Link to="/" className={Styles.nav_links}>FILMS</Link>
+                <Link to="/characters" className={Styles.nav_links}>CHARACTERS</Link>
             </div>
         </div>
     </div>

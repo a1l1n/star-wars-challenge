@@ -1,15 +1,16 @@
 import React, { useMemo } from 'react';
 import { useSelector } from 'react-redux';
-import { useTable, useGlobalFilter, useFilters, usePagination } from 'react-table';
+import { useTable, useSortBy, useGlobalFilter, useFilters, usePagination } from 'react-table';
+import { MdExpandLess, MdExpandMore } from "react-icons/md";
 import { GlobalFilter } from '../globalFiter/globalFilter';
 import { COLUMNS } from '../columns';
-import Styles from "../filteringTable/Table.module.css";
+import Styles from "../filteringTable/filteringTable.module.css";
 
 export default function FilteringTable() {
     const characterState = useSelector((state) => state.characters);
-    const columns = useMemo(() => COLUMNS, []);
-    const flatArray = characterState.flat(Infinity);
+    const flatArray = characterState.flat(Infinity); 
     const characters = useMemo(() => flatArray, []);
+    const columns = useMemo(() => COLUMNS, []);
     
     
     const { getTableProps, 
@@ -28,7 +29,8 @@ export default function FilteringTable() {
             data: characters
         }, useFilters, 
         useGlobalFilter, 
-        usePagination, 
+        useSortBy,
+        usePagination,
         );
 
     const { globalFilter } = state;
@@ -44,7 +46,10 @@ export default function FilteringTable() {
                     <tr {...headerGroup.getHeaderGroupProps()}>
                     {
                         headerGroup.headers.map((column) => (
-                            <th {...column.getHeaderProps()}>{column.render("Header")}
+                            <th {...column.getHeaderProps(column.getSortByToggleProps())}>{column.render("Header")}
+                                <span>
+                                    {column.isSorted ? (column.isSortedDesc ? <MdExpandLess /> : <MdExpandMore />) : ""}
+                                </span>
                                 <div>{column.canFilter ? column.render("Filter") : null}</div>
                             </th>
                             ))

@@ -5,7 +5,8 @@ import {
 
 const initialState = {
     films: [],
-    characters: []
+    characters: [],
+    loading: true
 };
 
 export default function reducer(state = initialState, actions) {
@@ -13,12 +14,14 @@ export default function reducer(state = initialState, actions) {
         case GET_FILMS:
             return {
                 ...state,
-                films: actions.payload
+                films: actions.payload,
+                loading: true
             }
         case GET_CHARACTERS:
             return {
                 ...state,
-                characters: actions.payload
+                characters: actions.payload,
+                loading: false
             }
         default: return state;
     }

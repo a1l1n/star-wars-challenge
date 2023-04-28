@@ -19,7 +19,7 @@ export function getFilms() {
 };
 
 export function getCharacters() {
-    return async function(dispatch) {
+    return function(dispatch) {
         try {
             let pages = [1, 2, 3, 4, 5, 6, 7, 8, 9];
             let characters = [];
@@ -28,7 +28,7 @@ export function getCharacters() {
              let promise = await axios.get(`https://swapi.dev/api/people/?page=${i}`); 
                 characters.push(promise.data.results);
             });           
-
+            
             return dispatch({
                 type: GET_CHARACTERS,
                 payload: characters

@@ -1,21 +1,20 @@
 .characters_container {
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     width: 100vw;
-    height: 100vh;
 }
 
 /* RESPONSIVE -------------------------------------- */
 @media screen and (max-width: 870px) {
     .characters_container {
-        padding-top: 4em;
+        padding-top: 3em;
     }
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     .characters_container {
-        padding-top: 11em;
+        padding-top: em;
     }
-}
+} */

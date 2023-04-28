@@ -16,3 +16,7 @@ La tabla así mismo presenta una serie de filtros globales y específicos para c
 - [ ] React
 - [ ] React-Table
 - [ ] Redux
+
+|Films Component |
+|--------------|
+|![Films](./assets/readmeImage/filmsComponent.png)

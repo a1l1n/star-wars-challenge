@@ -1,7 +1,8 @@
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Characters from './pages/characters/Characters';
-import Films from './pages/films/Films';
 import Navbar from './components/navbar/Navbar';
+import Films from './pages/films/Films';
+const LazyCharacters = React.lazy(() => import('./pages/characters/Characters'))
 import arturito from "./assets/svgs/r2-d2-icon.svg";
 import './App.css';
 
@@ -16,10 +17,15 @@ function App() {
         </svg>
       </div>
       <img src={arturito} alt="r2-d2 image" className="arturito"/>
-      <Routes>
-        <Route exact path="/" element={<Films />}/>
-        <Route exact path="/characters" element={<Characters />} />
-      </Routes>  
+     
+        <Routes>
+          <Route exact path="/" element={<Films />}/>
+          <Route exact path="/characters" 
+            element={<React.Suspense fallback="Loading..." >
+            <LazyCharacters />
+            </React.Suspense>} />
+        </Routes>  
+      
     </>
   )
 }

@@ -1,20 +1,20 @@
 .global_filter_container {
-    background-color: rgba(245, 245, 245, 0.253);
-    height: 3em;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    margin-top: 8em;
-    width: 60vw;
+    background-color: rgba(245, 245, 245, 0.253);
     color: white;
+    display: flex;
+    height: 3em;
+    justify-content: center;
+    margin-top: 2em;
+    width: 60vw;
 } 
 
 .global_filter_container input {
+    background-color: rgba(245, 245, 245, 0.616);
     border: none;
     outline: none;
     margin-left: 2em;
     height: 1.5em;
-    background-color: rgba(245, 245, 245, 0.616);
 }
 
 /* RESPONSIVE -------------------------------------- */

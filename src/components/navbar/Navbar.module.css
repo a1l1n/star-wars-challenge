@@ -1,19 +1,19 @@
 .nav {
-    position: relative;
-    z-index: 4;
-    display: flex;
-    width: 100vw;
-    position: fixed;
-    height: 8em;
     background-color: #292929;
+    display: flex;
+    height: 8em;
+    position: fixed;
+    position: relative;
     transition: 0.2s;
+    width: 100vw;
+    z-index: 4;
 }
 
 .nav_container {
-    width: 70%;
-    margin: auto;
     display: flex;
     justify-content: space-between;
+    margin: auto;
+    width: 70%;
 }
 
 .nav_logo {
@@ -21,24 +21,32 @@
 }
 
 .nav_links_container {
-    width: 50%;
     display: flex;
     justify-content: space-evenly;
     margin: auto 0;
+    width: 50%;
 }
 
 .nav_links {
     color: whitesmoke;
+    font-size: 20px;
+    letter-spacing: 5px;
+    margin-right: 1em;
     text-decoration: none;
-    font-size: 24px;
 }
 
 .nav_links:hover {
+    color: rgb(255, 217, 0);
     transition: 0.4s;
-    color: rgb(255, 217, 0)
 }
 
 /* RESPONSIVE -------------------------------------- */
+@media screen and (max-width: 700px) {
+    .nav_container {
+        padding-left: 1em;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .nav {
         height: 15em;
