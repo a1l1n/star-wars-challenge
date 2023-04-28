@@ -19,4 +19,4 @@ La tabla así mismo presenta una serie de filtros globales y específicos para c
 
 |Films Component |
 |--------------|
-|![Films](./assets/readmeImage/filmsComponent.png)
+|![Films](./src/assets/readmeImage/filmsComponent.png)
