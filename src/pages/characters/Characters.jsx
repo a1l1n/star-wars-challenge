@@ -12,7 +12,7 @@ export default function Characters() {
   useEffect(() => {
     dispatch(getCharacters())
   }, [])
-  
+    
   return (
     <div className={Styles.characters_container}>
       {
