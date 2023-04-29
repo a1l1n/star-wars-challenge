@@ -8,8 +8,7 @@ import Styles from "../filteringTable/filteringTable.module.css";
 
 export default function FilteringTable() {
     const characterState = useSelector((state) => state.characters);
-    const flatArray = characterState.flat(Infinity); 
-    const characters = useMemo(() => flatArray, []);
+    const characters = useMemo(() => characterState, []);
     const columns = useMemo(() => COLUMNS, []);
     
     
